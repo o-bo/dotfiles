@@ -83,9 +83,33 @@ if executable('ag')
 endif
 
 " Color scheme
-colorscheme github
+colorscheme molokai
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
+
+if has("gui_running")
+	if has("gui_mac") || has("gui_macvim")
+		set guifont=Menlo:h12
+		set transparency=1
+	endif
+else
+	let g:CSApprox_loaded = 1
+
+	if $COLORTERM == 'gnome-terminal'
+		set term=gnome-256color
+	else
+		if $TERM == 'xterm'
+			set term=xterm-256color
+		endif
+	endif
+endif
+
+if &term =~ '256color'
+	" Disable Background Color Erase (BCE) so that color schemes work
+	" properly when Vim is used inside tmux and GNU screen.
+	" See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+	set t_ut=
+endif
 
 " Make it obvious where 80 characters is
 set textwidth=80
@@ -161,3 +185,15 @@ set diffopt+=vertical
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+"" NERDTree configuration
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
+let NERDTreeShowBookmarks=1
+let g:nerdtree_tabs_focus_on_files=1
+let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
+let g:NERDTreeWinSize = 20
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
+nnoremap <silent> <F2> :NERDTreeFind<CR>
+noremap <F3> :NERDTreeToggle<CR>
