@@ -84,7 +84,7 @@ endif
 
 " Color scheme
 colorscheme molokai
-highlight NonText guibg=#060606
+"highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 if has("gui_running")
