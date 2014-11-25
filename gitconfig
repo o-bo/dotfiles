@@ -1,7 +1,7 @@
 [core]
   autocrlf = input
   excludesfile = /Users/olivier/.gitignore
-  editor = mvim
+  editor = vim
 [color]
   ui = true
 [color "branch"]
