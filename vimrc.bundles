@@ -33,6 +33,7 @@ Plugin 'vim-scripts/tComment'
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'nanotech/jellybeans.vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
