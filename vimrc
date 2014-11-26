@@ -142,7 +142,7 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 map <Leader>ct :!ctags -R .<CR>
 
 " Switch between the last two files
-nnoremap <leader><leader> <c-^>
+" nnoremap <leader><leader> <c-^>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
