@@ -35,6 +35,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'mustache/vim-mustache-handlebars'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
