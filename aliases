@@ -28,5 +28,9 @@ alias m="migrate"
 alias rk="rake"
 alias s="rspec"
 
+# Mysql
+alias sqlstart="mysql.server start"
+alias sqlstop="mysql.server stop"
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
