@@ -38,7 +38,6 @@ Session.vim
 *.class
 
 # generated files
-bin/
 gen/
 
 # Local configuration file (sdk path, etc)
