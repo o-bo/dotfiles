@@ -27,6 +27,7 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate"
 alias m="migrate"
 alias rk="rake"
 alias s="rspec"
+alias acp="RAILS_ENV=production rake assets:clean assets:precompile"
 
 # Mysql
 alias sqlstart="mysql.server start"
