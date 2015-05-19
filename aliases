@@ -33,5 +33,8 @@ alias acp="RAILS_ENV=production rake assets:clean assets:precompile"
 alias sqlstart="mysql.server start"
 alias sqlstop="mysql.server stop"
 
+# Elasticsearch
+alias elastic="elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
