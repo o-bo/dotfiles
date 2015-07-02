@@ -28,6 +28,7 @@ alias m="migrate"
 alias rk="rake"
 alias s="rspec"
 alias acp="RAILS_ENV=production rake assets:clean assets:precompile"
+alias rpow="touch ~/.pow/restart.txt"
 
 # Mysql
 alias sqlstart="mysql.server start"
