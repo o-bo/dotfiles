@@ -38,6 +38,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'rking/ag.vim'
+Plugin 'bling/vim-airline'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
