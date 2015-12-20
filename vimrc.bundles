@@ -41,6 +41,7 @@ Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'chrisbra/NrrwRgn'
 Plugin 'wincent/ferret'
+Plugin 'mxw/vim-jsx'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
