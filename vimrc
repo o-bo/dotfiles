@@ -166,6 +166,11 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Fugitive
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gps :Gpush<CR>
+nnoremap <Leader>gpl :Gpull<CR>
+
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
