@@ -39,3 +39,6 @@ alias elastic="elasticsearch --config=/usr/local/opt/elasticsearch/config/elasti
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+# Goodies
+alias meteo="curl -4 http://wttr.in/Bordeaux"
