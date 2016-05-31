@@ -43,6 +43,7 @@ Plugin 'wincent/ferret'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'digitaltoad/vim-jade'
+Plugin '4Evergreen4/vim-hardy'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
