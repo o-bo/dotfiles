@@ -82,7 +82,7 @@ highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=Menlo:h12
+    set guifont=Meslo\ LG\ S\ for\ Powerline:h12
     set transparency=1
   endif
 else
@@ -229,3 +229,6 @@ endfunction
 if has("gui_running")
   autocmd BufWritePre * :call TrimWhiteSpace()
 endif
+
+
+let g:airline_powerline_fonts = 1
