@@ -1,6 +1,7 @@
-*.DS_Store
+.DS_Store
 *.sw[nop]
 .bundle
+.byebug_history
 .env
 db/*.sqlite3
 log/*.log
@@ -52,3 +53,5 @@ local.properties
 #.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
 .gradle
 build/
+
+*.pyc
