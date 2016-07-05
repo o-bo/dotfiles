@@ -69,4 +69,3 @@ if filereadable(expand("~/.vimrc.bundles.local"))
 endif
 
 call plug#end()
-
