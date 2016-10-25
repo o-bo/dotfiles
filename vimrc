@@ -195,6 +195,27 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
 
+" NERDTrees File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg)
+  exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guifg='. a:guifg
+  exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('html', 202, 'none', '#FC4709')
+call NERDTreeHighlightFile('hbs', 202, 'none', '#FC4709')
+call NERDTreeHighlightFile('jade', 149, 'none', '#A0D24D')
+call NERDTreeHighlightFile('json', 223, 'none', '#FECEA0')
+call NERDTreeHighlightFile('scss', 44, 'none', '#1AD0CE')
+call NERDTreeHighlightFile('css', 44, 'none', '#1AD0CE')
+call NERDTreeHighlightFile('js', 226, 'none', '#FFFF0D')
+call NERDTreeHighlightFile('rb', 197, 'none', '#E53378')
+call NERDTreeHighlightFile('md', 208, 'none', '#FD720A')
+call NERDTreeHighlightFile('php', 140, 'none', '#9E6FCD')
+call NERDTreeHighlightFile('svg', 178, 'none', '#CDA109')
+call NERDTreeHighlightFile('gif', 36, 'none', '#15A274')
+call NERDTreeHighlightFile('jpg', 36, 'none', '#15A274')
+call NERDTreeHighlightFile('png', 36, 'none', '#15A274')
+
 "" CTRL-P configurations
 nnoremap <leader>b :CtrlPBuffer<CR>
 
