@@ -74,6 +74,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'jiangmiao/auto-pairs'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
