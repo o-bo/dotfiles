@@ -73,7 +73,7 @@ highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=Meslo\ LG\ S\ for\ Powerline:h12
+    set guifont=MesloLGS\ Nerd\ Font:h12
     set transparency=1
   endif
 else
@@ -172,6 +172,9 @@ set spellfile=$HOME/.vim-spell-en.utf-8.add
 " Autocomplete with dictionary words when spell check is on
 set complete+=kspell
 
+" Utilsnips
+let g:UltiSnipsExpandTrigger="<C-space>"
+
 " Always use vertical diffs
 set diffopt+=vertical
 
@@ -223,3 +226,4 @@ endif
 
 
 let g:airline_powerline_fonts = 1
+set encoding=utf8
