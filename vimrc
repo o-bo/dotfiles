@@ -67,14 +67,18 @@ nnoremap <Leader>f :Ack!<Space>
 
 " Color scheme
 " colorscheme molokai
-colorscheme jellybeans
+" colorscheme jellybeans
+set background=dark
+colorscheme hybrid_reverse
+" colorscheme hybrid_material
 "highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
+let g:enable_bold_font = 1
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
     set guifont=MesloLGS\ Nerd\ Font:h12
-    set transparency=1
+    "set transparency=1
   endif
 else
   let g:CSApprox_loaded = 1
@@ -160,7 +164,26 @@ nnoremap <Leader>ac :ArduinoVerify<CR>
 nnoremap <Leader>au :ArduinoUpload<CR>
 
 " configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {"regex": "possibly useless use of a variable in void context"}
@@ -190,7 +213,7 @@ let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 20
+let g:NERDTreeWinSize = 30
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
@@ -249,4 +272,5 @@ endif
 
 
 let g:airline_powerline_fonts = 1
+let g:airline_theme = "hybrid"
 set encoding=utf8
