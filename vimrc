@@ -77,7 +77,8 @@ let g:enable_bold_font = 1
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=MesloLGS\ Nerd\ Font:h12
+    set guifont=MesloLGS\ Nerd\ Font:h13
+    " set guifont=Menlo\ for\ Powerline:h13
     "set transparency=1
   endif
 else

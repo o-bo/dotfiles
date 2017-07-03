@@ -29,3 +29,11 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Goodies
 alias meteo="curl -4 http://wttr.in/Bordeaux"
+
+# Git
+alias rstart="git flow release start"
+alias rend="git flow release finish"
+alias fstart="git flow feature start"
+alias fend="git flow feature finish"
+alias hstart="git flow hotfix start"
+alias hend="git flow hotfix finish"
