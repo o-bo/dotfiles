@@ -37,3 +37,6 @@ alias fstart="git flow feature start"
 alias fend="git flow feature finish"
 alias hstart="git flow hotfix start"
 alias hend="git flow hotfix finish"
+
+# vim
+alias vim="/usr/local/bin/vim"
