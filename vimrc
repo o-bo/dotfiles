@@ -69,7 +69,9 @@ nnoremap <Leader>f :Ack!<Space>
 " colorscheme molokai
 " colorscheme jellybeans
 set background=dark
-colorscheme hybrid_reverse
+" colorscheme hybrid_reverse
+" colorscheme vim-material
+colorscheme nova
 " colorscheme hybrid_material
 "highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
@@ -77,6 +79,8 @@ let g:enable_bold_font = 1
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
+    " set macligatures
+    " set guifont=Fira\ Code:h14
     set guifont=MesloLGS\ Nerd\ Font:h13
     " set guifont=Menlo\ for\ Powerline:h13
     "set transparency=1
@@ -165,33 +169,36 @@ nnoremap <Leader>ac :ArduinoVerify<CR>
 nnoremap <Leader>au :ArduinoUpload<CR>
 
 " configure syntastic syntax checking to check on open as well as save
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':   [],'passive_filetypes': [] }
-noremap <C-w>e :SyntasticCheck<CR>
-noremap <C-w>f :SyntasticToggleMode<CR>
-let g:syntastic_quiet_messages={'level':'warnings'}
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_loc_list_height = 5
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':   [],'passive_filetypes': [] }
+" noremap <C-w>e :SyntasticCheck<CR>
+" noremap <C-w>f :SyntasticToggleMode<CR>
+" let g:syntastic_quiet_messages={'level':'warnings'}
+"
+" let g:syntastic_error_symbol = '❌'
+" let g:syntastic_style_error_symbol = '⁉️'
+" let g:syntastic_warning_symbol = '⚠️'
+" let g:syntastic_style_warning_symbol = '💩'
+"
+" highlight link SyntasticErrorSign SignColumn
+" highlight link SyntasticWarningSign SignColumn
+" highlight link SyntasticStyleErrorSign SignColumn
+" highlight link SyntasticStyleWarningSign SignColumn
+" let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+" let g:syntastic_eruby_ruby_quiet_messages =
+"     \ {"regex": "possibly useless use of a variable in void context"}
 
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '💩'
-
-highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
-highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_eruby_ruby_quiet_messages =
-    \ {"regex": "possibly useless use of a variable in void context"}
+let g:ale_sign_error = '❌' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '⚠️'
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
@@ -259,6 +266,9 @@ noremap <F6> :Autoformat<CR><CR>
 
 let g:jsx_ext_required = 0
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
 "*****************************************************************************
 "" Functions
 "*****************************************************************************
@@ -277,5 +287,12 @@ endif
 
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "hybrid"
+let g:airline_theme = "material"
+let g:airline#extensions#ale#enabled = 1
 set encoding=utf8
+
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
